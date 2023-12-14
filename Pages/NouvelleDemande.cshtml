@@ -1,0 +1,54 @@
+﻿@page
+@model NouvelleDemandeModel
+@{
+}
+<div class="text-center">
+    @if (Model.hasData)
+    {
+        <b><i>Votre Facture: </i></b>
+            <p class="display-7"> Client: @Model.prenom @Model.nom </p>
+            <p class="display-7">Type de couvre choisi: @Model.typecouvre </p>
+            <p class="display-7">Largeur de votre couvre: @Model.largeur m </p>
+            <p class="display-7">Langueur de votre couvre: @Model.langueur m </p>
+
+    }
+    <form method="post">
+        <div class="infopers">
+            <h2><b>Les informations personelles:</b></h2>
+            <b>
+                <i>
+                    <label for="nom">Nom: </label>
+                    <input type="text" name="nom" id="nom" />
+                    <br>
+                    <label for="prenom">Prénom: </label>
+                    <input type="text" name="prenom" id="prenom" />
+                    <br>
+                    <label for="numTel">Numéro de Tel:</label>
+                    <input type="number" name="numTel" id="numTel" />
+                    <br>
+                    <label for="Email">Email:  </label>
+                    <input type="text" name="email" id="email" /><br>
+                    <label for="adressep">Adresse domicile: </label>
+                    <input type="text" name="adressep" id="adressep" /><br>
+                </i>
+            </b>
+            <small id="infoHelp" class="form-text text-muted">Nous ne partageons pas vos informations avec les autres.</small>
+        </div>
+        <div>
+            <h2><b>Votre demande:</b></h2>
+            <b>
+                <i>
+                    <label for="langueur">Langueur de couvre: </label>
+                    <input type="number" name="langueur" id="langueur" /><br>
+                    <br>
+                    <label for="largeur">Largeur de couvre: </label>
+                    <input type="number" name="largeur" id="largeur" /><br>
+                    <br>
+                    <label for="typecouvre">Type de couvre: </label>
+                    <input type="text" name="typecouvre" id="typecouvre" /><br>
+                </i>
+            </b>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>

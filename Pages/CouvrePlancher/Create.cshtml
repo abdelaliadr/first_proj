@@ -1,0 +1,51 @@
+﻿@page
+@model first_proj.CouvrePlancher.CreateModel
+@{
+	ViewData["Title"] = "Creation d'un Couvre Plancher";
+}
+<div class="text-center">
+	<h1>Nouveau Couvre Plancher</h1>
+	<hr />
+</div>
+
+
+@if (Model.messageErreur.Length > 1)
+{
+		<div class="alert alert-warning alert-dismissible fade show" role="alert">
+			<small>@Model.messageErreur</small>
+			<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+		</div>
+}
+
+<form method="post">
+	<div class="row mb-2">
+		<label class="col-sm-3 col-form-label">Type</label>
+		<div class="col-sm-6">
+			<input type="text" class="form-control" name="typec" value="@Model.couvre.typec"/>
+		</div>
+	</div>
+
+	<div class="row mb-2">
+		<label class="col-sm-3 col-form-labek">Matériaux </label>
+		<div class="col-sm-6">
+			<input type="text" class="form-control" name="materiaux" value="@Model.couvre.materiaux" />
+		</div>
+	</div>
+
+	<div class="row mb-4">
+		<label class="col-sm-3 col-form-label">Main d'oeuvre</label>
+		<div class="col-sm-6">
+			<input type="text" class="form-control" name="main_oeuvre" value="@Model.couvre.main_ouevre" />
+		</div>
+	</div>
+
+	<div class="row mb-2">
+		<div class="offset-sm-3 col-sm-3 d-grid">
+			<button type="submit" class="btn btn-warning">Ajouter</button>
+		</div>
+		<div class="col-sm-3 d-grid">
+			<a class="btn btn-outline-primary" href="/CouvrePlancher/Index" role="button">Annuler</a>
+		</div>
+	</div>
+
+</form>

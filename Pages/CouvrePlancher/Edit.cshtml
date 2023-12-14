@@ -1,0 +1,54 @@
+﻿@page
+@model first_proj.CouvrePlancher.EditModel
+@{
+	ViewData["Title"] = "Modification d'un Couvre Plancher";
+}
+
+
+<div class="text-center">
+	<h1>Modifier un couvre</h1>
+	<hr />
+</div>
+
+
+@if (Model.messageErreur.Length > 1)
+{
+	<div class="alert alert-warning alert-dismissible fade show" role="alert">
+		<small>@Model.messageErreur</small>
+		<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+	</div>
+}
+
+<form method="post">
+	<input type="hidden" name="id" value="@Model.couvre.id" />
+	<div class="row mb-2">
+		<label class="col-sm-3 col-form-labek">Type</label>
+		<div class="col-sm-6">
+			<input type="text" class="form-control" name="type" value="@Model.couvre.typec" />
+		</div>
+	</div>
+
+	<div class="row mb-2">
+		<label class="col-sm-3 col-form-labek">Matériaux</label>
+		<div class="col-sm-6">
+			<input type="text" class="form-control" name="materiaux" value="@Model.couvre.materiaux" />
+		</div>
+	</div>
+
+	<div class="row mb-4">
+		<label class="col-sm-3 col-form-labek">Main d'oeuvre</label>
+		<div class="col-sm-6">
+			<input type="text" class="form-control" name="main_ouevre" value="@Model.couvre.main_ouevre" />
+		</div>
+	</div>
+
+	<div class="row mb-2">
+		<div class="offset-sm-3 col-sm-3 d-grid">
+			<button type="submit" class="btn btn-primary">Modifier</button>
+		</div>
+		<div class="col-sm-3 d-grid">
+			<a class="btn btn-outline-primary" href="/Produit/Index" role="button">Annuler</a>
+		</div>
+	</div>
+
+</form>

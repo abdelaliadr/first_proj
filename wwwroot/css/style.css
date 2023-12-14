@@ -1,0 +1,44 @@
+﻿.navbar-brand,
+.navbar-nav a {
+    font-family: 'TimesNewRoman', cursive;
+    font-size: larger;
+}
+
+body {
+    background-color: skyblue;
+}
+
+.logo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.navbar-brand {
+    display: block;
+    width: 200px;
+    height: 200px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+h1 {
+    font-family: cursive;
+}
+
+div {
+    text-align: justify;
+    text-align: left;
+}
+
+input {
+    text-align: justify
+}
+
+h4 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+h1 {
+    text-align: center;
+}
